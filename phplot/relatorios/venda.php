@@ -4,7 +4,7 @@ include_once("../phplot.php");
   
 //Container (Estabelecendo conexão com o banco de dados) -->
 //Criando as constantes com as credencias de acesso ao banco de dados
-$servername = 'localhost'; $username = 'u853940274_bdloja'; $password = 'Julh@89742583'; $database = 'u853940274_bdloja';
+$servername = 'localhost'; $username = '**********************'; $password = '**********************'; $database = '**********************';
 
 //Criar a conexão com banco de dados 
 try {
@@ -14,7 +14,7 @@ echo "Erro: Conexão com banco de dados não foi realizada com sucesso. Erro ger
                           }
 					  
 //inserindo no banco de dados 
-$db = mysqli_select_db($conn, "u853940274_bdloja");   
+$db = mysqli_select_db($conn, "**********************");   
 
 //Configurando e iniciando o controle de sessões
 session_start();
@@ -25,40 +25,40 @@ $datacompleta = date("Y/m/d");
 $ano = substr($datacompleta, 0, 4);
 		  
 //vendas no mes 01/2021	 
-$sql = "SELECT sum(preco) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-01-01' and '$ano-01-31';";
+$sql = "SELECT sum(preco * quantidade) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-01-01' and '$ano-01-31';";
 $result = mysqli_query($conn,$sql);while($data = mysqli_fetch_array($result)){$vendas01 = $data[0];} 
 //vendas no mes 02/2021	
-$sql = "SELECT sum(preco) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-02-01' and '$ano-02-29';";
+$sql = "SELECT sum(preco * quantidade) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-02-01' and '$ano-02-29';";
 $result = mysqli_query($conn,$sql);while($data = mysqli_fetch_array($result)){$vendas02 = $data[0];} 
 //vendas no mes 03/2021	
-$sql = "SELECT sum(preco) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-03-01' and '$ano-03-31';";
+$sql = "SELECT sum(preco * quantidade) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-03-01' and '$ano-03-31';";
 $result = mysqli_query($conn,$sql);while($data = mysqli_fetch_array($result)){$vendas03 = $data[0];} 
 //vendas no mes 04/2021	
-$sql = "SELECT sum(preco) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-04-01' and '$ano-04-30';";
+$sql = "SELECT sum(preco * quantidade) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-04-01' and '$ano-04-30';";
 $result = mysqli_query($conn,$sql);while($data = mysqli_fetch_array($result)){$vendas04 = $data[0];} 
 //vendas no mes 05/2021	
-$sql = "SELECT sum(preco) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-05-01' and '$ano-05-31';";
+$sql = "SELECT sum(preco * quantidade) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-05-01' and '$ano-05-31';";
 $result = mysqli_query($conn,$sql);while($data = mysqli_fetch_array($result)){$vendas05 = $data[0];} 
 //vendas no mes 06/2021	
-$sql = "SELECT sum(preco) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-06-01' and '$ano-06-30';";
+$sql = "SELECT sum(preco * quantidade) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-06-01' and '$ano-06-30';";
 $result = mysqli_query($conn,$sql);while($data = mysqli_fetch_array($result)){$vendas06 = $data[0];} 
 //vendas no mes 07/2021	
-$sql = "SELECT sum(preco) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-07-01' and '$ano-07-31';";
+$sql = "SELECT sum(preco * quantidade) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-07-01' and '$ano-07-31';";
 $result = mysqli_query($conn,$sql);while($data = mysqli_fetch_array($result)){$vendas07 = $data[0];} 
 //vendas no mes 08/2021	
-$sql = "SELECT sum(preco) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-08-01' and '$ano-08-31';";
+$sql = "SELECT sum(preco * quantidade) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-08-01' and '$ano-08-31';";
 $result = mysqli_query($conn,$sql);while($data = mysqli_fetch_array($result)){$vendas08 = $data[0];} 
 //vendas no mes 09/2021	
-$sql = "SELECT sum(preco) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-09-01' and '$ano-09-30';";
+$sql = "SELECT sum(preco * quantidade) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-09-01' and '$ano-09-30';";
 $result = mysqli_query($conn,$sql);while($data = mysqli_fetch_array($result)){$vendas09 = $data[0];} 
 //vendas no mes 10/2021	
-$sql = "SELECT sum(preco) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-10-01' and '$ano-10-31';";
+$sql = "SELECT sum(preco * quantidade) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-10-01' and '$ano-10-31';";
 $result = mysqli_query($conn,$sql);while($data = mysqli_fetch_array($result)){$vendas10 = $data[0];} 
 //vendas no mes 11/2021	
-$sql = "SELECT sum(preco) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-11-01' and '$ano-11-31';";
+$sql = "SELECT sum(preco * quantidade) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-11-01' and '$ano-11-31';";
 $result = mysqli_query($conn,$sql);while($data = mysqli_fetch_array($result)){$vendas11 = $data[0];} 
 //vendas no mes 12/2021	
-$sql = "SELECT sum(preco) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-12-01' and '$ano-12-31';";
+$sql = "SELECT sum(preco * quantidade) FROM vendas WHERE setor = $setorVenda and  data_venda between '$ano-12-01' and '$ano-12-31';";
 $result = mysqli_query($conn,$sql);while($data = mysqli_fetch_array($result)){$vendas12 = $data[0];} 
 
   

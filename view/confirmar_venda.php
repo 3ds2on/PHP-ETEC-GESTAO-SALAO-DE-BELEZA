@@ -17,7 +17,7 @@
 		
 		
             <div class="card">
-            <h5 class="card-header bg-primary text-white"><i class="fas fa-plus"></i> Vender produto</h5>
+            <h5 class="card-header text-white" style="background-color: #b4918f"><i class="fas fa-plus"></i> Vender produto</h5>
             <div class="card-body"> 
             <form action="controller/vender.php" method="post">
 			
@@ -50,7 +50,7 @@
                     <input type="number" step="any" class="form-control" name="vendaQuantidade" id="vendaQuantidade" placeholder="Informe a quantidade" required>
                 </div>    
                 
-                <input type="submit" class="btn btn-primary" value="Enviar">
+                <input type="submit" class="btn text-white" style="background-color: #b4918f" value="Enviar">
     	    </form>
 			</div>
             </div>

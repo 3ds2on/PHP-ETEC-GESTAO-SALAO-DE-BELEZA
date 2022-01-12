@@ -1,23 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+  
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="sortcut icon" href="images/favicon.gif" type="image/gif"/>;
+  
+</head>
+</html>
 <?php
-
-//Encaminhado a pagina default para a home
-$iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
-$ipad = strpos($_SERVER['HTTP_USER_AGENT'],"iPad");
-$android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
-$palmpre = strpos($_SERVER['HTTP_USER_AGENT'],"webOS");
-$berry = strpos($_SERVER['HTTP_USER_AGENT'],"BlackBerry");
-$ipod = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");
-$symbian = strpos($_SERVER['HTTP_USER_AGENT'],"Symbian");
-$windowsphone = strpos($_SERVER['HTTP_USER_AGENT'],"Windows Phone");
-
-if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian || $windowsphone == true) 
+session_start();
+if(isset($_GET["classe"]) && isset($_GET["metodo"]) ) //verificar se existe
 {
-//como era// header('Location: viwer/mobile.php');
-header('Location: loja/index.php');
+    //acessando a classe controller e o método dentro da classe
+    $classe = $_GET["classe"].'controller';
+    $metodo = $_GET["metodo"];
+
+    include_once "controller/$classe.php";
+    $obj = new $classe();
+    $obj->$metodo();
 }
-else 
+else
 {
-//como era// header('Location: viwer/home.php');
-header('Location: loja/index.php');
-} 
+    include "controller/homecontroller.php";
+    $home = new homecontroller();
+    $home->inicio();
+}
+
 ?>

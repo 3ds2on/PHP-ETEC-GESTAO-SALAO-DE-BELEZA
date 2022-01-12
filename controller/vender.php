@@ -7,10 +7,22 @@
 		$vendaQuantidade = $_POST["vendaQuantidade"];
 		$codcategoria = $_POST["codcategoria"];
 
+		//Configurando e iniciando o controle de sessões
+		session_start();
+		
+		function verificarAcesso()
+		{
+			if($_SESSION["acesso_logado"] == 2) //usuário limitado
+			{
+				echo "<script>alert('VOCÊ NÃO TEM ACESSO A ESSA FUNÇÃO!');
+				window.location='index.php';</script>";		
+				exit;
+			}        
+		}
+
 		if($vendaQuantidade >= 1)
 		{
 		include('../model/produtos_servicos.php'); //incluir arquivo 
-		$this->verificarAcesso();//verificar se não é administrador
 		$v = new Vender(); //instância da classe 
 		$v->codcategoria = $codcategoria; //Consumindo a clase para atribuir um valor
 		$v->codproduto = $codproduto; //Consumindo a clase para atribuir um valor
@@ -25,15 +37,5 @@
         echo "<script>alert('INFORME UMA QUANTIDADE MAIOR QUE 0 !');
         window.location='../index.php?classe=produto&metodo=quantidadeParaVender&codproduto=$codproduto &nomeproduto=$nomeproduto &preco=$preco &descricao=$descricao &codcategoria=$codcategoria';</script>";
 		}
-		
-		function verificarAcesso()
-		{
-			if($_SESSION["acesso_logado"] == 2) //usuário limitado
-			{
-				echo "<script>alert('VOCÊ NÃO TEM ACESSO A ESSA FUNÇÃO!');
-				window.location='index.php';</script>";		
-				exit;
-			}        
-		}
-	
+			
 ?>

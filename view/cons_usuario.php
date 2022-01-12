@@ -92,7 +92,7 @@ table {
     <div class="row mt-3">
         <div class="col-10 mx-auto">
             <div class="card">
-            <h5 class="card-header bg-primary text-white"><i class="fas fa-search"></i> Consulta de Usuários</h5>
+            <h5 class="card-header text-white" style="background-color: #b4918f"><i class="fas fa-search"></i> Consulta de Usuários</h5>
             <div class="card-body">
               <table class="table table-striped table-action" id="tabelaConsulta">
                     <thead>

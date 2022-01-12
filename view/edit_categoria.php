@@ -15,7 +15,7 @@
     <div class="row mt-3">
         <div class="col-10 mx-auto">
             <div class="card">
-            <h5 class="card-header bg-primary text-white"><i class="fas fa-plus"></i> Editar Categoria</h5>
+            <h5 class="card-header text-white" style="background-color: #b4918f"><i class="fas fa-plus"></i> Editar Categoria</h5>
             <div class="card-body">
             <form action="index.php?classe=categoria&metodo=atualizar" method="post">
                 <input type="hidden" name="codcategoria" value="<?php echo $dados->codcategoria;?>">
@@ -24,7 +24,7 @@
                     <input type="text" class="form-control" name="nomecategoria" placeholder="Informe o nome da categoria" value="<?php echo $dados->nomecategoria;?>" required>
                 </div>
 
-                <input type="submit" class="btn btn-primary" value="Gravar">
+                <input type="submit" class="btn text-white" style="background-color: #b4918f" value="Gravar">
             </div>
             </div>
         </div>

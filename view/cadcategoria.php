@@ -15,14 +15,14 @@
     <div class="row mt-3">
         <div class="col-10 mx-auto">
             <div class="card">
-            <h5 class="card-header bg-primary text-white"><i class="fas fa-plus"></i> Cadastro de Categorias</h5>
+            <h5 class="card-header text-white" style="background-color: #b4918f"><i class="fas fa-plus"></i> Cadastro de Categorias</h5>
             <div class="card-body">
             <form action="index.php?classe=categoria&metodo=gravar" method="post">
                 <div class="form-group">
                     <label>Nome</label>
                     <input type="text" class="form-control" name="nomecategoria" placeholder="Informe o nome da categoria" required>
                 </div>
-                <input type="submit" class="btn btn-primary" value="Gravar">
+                <input type="submit" class="btn text-white" style="background-color: #b4918f" value="Gravar">
             </div>
             </div>
         </div>

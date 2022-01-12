@@ -17,7 +17,7 @@
 		
 		
             <div class="card">
-            <h5 class="card-header bg-primary text-white"><i class="fas fa-plus"></i> Cadastro de Produto</h5>
+            <h5 class="card-header text-white" style="background-color: #b4918f"><i class="fas fa-plus"></i> Cadastro de Produto</h5>
             <div class="card-body">
             <form action="index.php?classe=produto&metodo=gravar" method="post">
                 <div class="form-group">
@@ -55,7 +55,7 @@
 				</select>
                 </div>
                 
-                <input type="submit" class="btn btn-primary" value="Gravar">
+                <input type="submit" class="btn text-white" style="background-color: #b4918f" value="Gravar">
     	    </form>
 			</div>
             </div>
@@ -64,7 +64,7 @@
 			<br></br>
 			
             <div class="card">
-            <h5 class="card-header bg-primary text-white"><i class="fas fa-plus"></i> Associar Produto</h5>
+            <h5 class="card-header text-white" style="background-color: #b4918f"><i class="fas fa-plus"></i> Associar Produto</h5>
             <div class="card-body">
 			<form id="my_form_filho" action="controller/associarcontroller.php" method="post">
 				<select name="id_categoria_z" id="id_categoria_z"  class="form-control">

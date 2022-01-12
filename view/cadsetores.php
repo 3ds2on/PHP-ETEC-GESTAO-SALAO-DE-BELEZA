@@ -17,7 +17,7 @@
 		
 		
             <div class="card">
-            <h5 class="card-header bg-primary text-white" style="background-color: #b4918f"><i class="fas fa-plus"></i> Cadastro de Setor</h5>
+            <h5 class="card-header text-white" style="background-color: #b4918f"><i class="fas fa-plus"></i> Cadastro de Setor</h5>
             <div class="card-body">
             <form action="index.php?classe=setores&metodo=gravar" method="post">
 
@@ -26,7 +26,7 @@
                     <input type="text" class="form-control" name="nomecategoria" placeholder="Nome do Setor" value=" " required>
                 </div>
       
-                <input type="submit" class="btn btn-primary" value="Gravar">
+                <input type="submit" class="btn text-white" style="background-color: #b4918f" value="Gravar">
 			</form>
             <center><span id="cadastrar"></span><p></center> <br>
             </div>

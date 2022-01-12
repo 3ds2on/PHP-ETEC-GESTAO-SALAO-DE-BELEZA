@@ -17,7 +17,7 @@
     <div class="row mt-3">
         <div class="col-10 mx-auto">
             <div class="card">
-            <h5 class="card-header bg-primary text-white"><i class="fal fa-prescription-bottle"></i> Estoque Atual</h5>
+            <h5 class="card-header text-white" style="background-color: #b4918f"><i class="fal fa-prescription-bottle"></i> Estoque Atual</h5>
             <div class="card-body">
               <table class="table table-striped" id="tabelaConsulta">
                     <thead>

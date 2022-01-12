@@ -15,7 +15,7 @@
     <div class="row mt-3">
         <div class="col-10 mx-auto">
             <div class="card">
-            <h5 class="card-header bg-primary text-white"><i class="fas fa-plus"></i> Atualizando Usuários</h5>
+            <h5 class="card-header text-white" style="background-color: #b4918f"><i class="fas fa-plus"></i> Atualizando Usuários</h5>
             <div class="card-body">
             <form action="index.php?classe=usuario&metodo=atualizar" method="post">
                 <input type="hidden" name="codusuario" value="<?php echo $dados->codusuario;?>">
@@ -49,7 +49,7 @@
 						<option value="">Selecione o Setor</option>
 					</select>
                 </div>
-                <input type="submit" class="btn btn-primary" value="Gravar">
+                <input type="submit" class="btn text-white" style="background-color: #b4918f" value="Gravar">
             </div>
             </div>
         </div>
